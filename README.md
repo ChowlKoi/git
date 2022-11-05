@@ -34,7 +34,7 @@ git config --global --list -> 查看本地用户配置信息
 ssh-keygen -t rsa -> 创建公钥并设置安全密钥类型（rsa）
 # 在将生成的.pub的内容上传至github中
 
-# 如遇到一下报错
+# 如遇到一下报错，这个报错一般是网络波动出现问题
 OpenSSL SSL_read: Connection was reset, errno 10054
 # 先检查一下hosts文件是否有问题，没有问题就输入一下代码
 git config --global http.sslverify "false"
