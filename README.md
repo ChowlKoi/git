@@ -10,6 +10,39 @@ Git是一个开源的分布式版本控制系统，可以有效、高速地处�
 
 ---
 
+# Git的第一次下载的一些配置
+
+---
+
+1.在官网先下载安装git
+
+2.安装完成后打开git，设置一些基础常用的配置
+
+```
+# 添加git的用户名与邮箱
+git config --global user.name "chowlkoi"
+git config --global user.email "ck@chowlkoi.com"
+# 查看配置信息
+git config --list -> 查看所有git配置信息
+git config --global --list -> 查看本地用户配置信息
+```
+
+3.在github上添加ssh公钥
+
+```
+# 在指定目录下添加ssh公钥
+ssh-keygen -t rsa -> 创建公钥并设置安全密钥类型（rsa）
+# 在将生成的.pub的内容上传至github中
+
+# 如遇到一下报错，这个报错一般是网络波动出现问题
+OpenSSL SSL_read: Connection was reset, errno 10054
+# 先检查一下hosts文件是否有问题，没有问题就输入一下代码
+git config --global http.sslverify "false"
+# 然后再执行git操作测试一下
+```
+
+
+
 # Git的使用方法
 
 ---
